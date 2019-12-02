@@ -1,7 +1,7 @@
 [![Tilia logo][Tilia-Image]](#)
 
-> ### Tilia {scope} {feature} {platform?}
-> {Description of feature}.
+> ### SDK -> Oculus Integration for the Unity Software
+> SDK Wrappers for the Oculus Integration Unity asset.
 
 [![Release][Version-Release]][Releases]
 [![License][License-Badge]][License]
@@ -9,9 +9,13 @@
 
 ## Introduction
 
-{Introduction into the purpose of the feature.}
+The [Oculus Integration] asset for the [Unity] software provides direct access to the Oculus hardware API and therefore offers a number of additional features outside of the default Unity software XR offering.
 
-> **Requires** {platform and minimum version number}.
+This SDK Wrapper enables the Oculus Integration features to be used with other Tilia packages for tighter integration.
+
+> **Requires**:
+> * The Unity software version `2018.3.10f1` (or above).
+> * The Oculus Integration asset `1.43` (or above).
 
 ## Getting Started
 
@@ -35,9 +39,9 @@ Please refer to the Extend Reality [Code of Conduct].
 
 Code released under the [MIT License][License].
 
-[License-Badge]: https://img.shields.io/github/license/ExtendRealityLtd/Tilia.{scope}.{feature}.{platform?}.svg
-[Version-Release]: https://img.shields.io/github/release/ExtendRealityLtd/Tilia.{scope}.{feature}.{platform?}.svg
-[project coding conventions]: https://github.com/ExtendRealityLtd/.github/blob/master/CONVENTIONS/{project_type}
+[License-Badge]: https://img.shields.io/github/license/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity.svg
+[Version-Release]: https://img.shields.io/github/release/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity.svg
+[project coding conventions]: https://github.com/ExtendRealityLtd/.github/blob/master/CONVENTIONS/UNITY3D.md
 
 [Tilia-Image]: https://user-images.githubusercontent.com/1029673/67681496-5bf10700-f985-11e9-9413-e61801b6eab5.png
 [License]: LICENSE.md
@@ -49,3 +53,6 @@ Code released under the [MIT License][License].
 [Releases]: ../../releases
 [Contributing guidelines]: https://github.com/ExtendRealityLtd/.github/blob/master/CONTRIBUTING.md
 [Code of Conduct]: https://github.com/ExtendRealityLtd/.github/blob/master/CODE_OF_CONDUCT.md
+
+[Oculus Integration]: https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022
+[Unity]: https://unity3d.com/
