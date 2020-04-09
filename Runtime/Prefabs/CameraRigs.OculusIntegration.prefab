@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackedGameObject: {fileID: 7127022810063979151}
+  relativeTo: {fileID: 7127022810063979145}
 --- !u!1 &7127022810501528422
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackedGameObject: {fileID: 7127022810063992901}
+  relativeTo: {fileID: 7127022810063979145}
 --- !u!1 &7127022810533420005
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,6 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackedGameObject: {fileID: 7127022810063990481}
+  relativeTo: {fileID: 7127022810063979145}
 --- !u!1 &7127022810852968224
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,6 +16,12 @@
         [Serialized]
         [field: DocumentedByXml]
         public GameObject TrackedGameObject { get; set; }
+        /// <summary>
+        /// An optional <see cref="GameObject"/> to consider the source relative to when retrieving velocities.
+        /// </summary>
+        [Serialized]
+        [field: DocumentedByXml]
+        public GameObject RelativeTo { get; set; }
 
         /// <inheritdoc />
         public override bool IsActive()
@@ -29,11 +35,11 @@
             switch (TrackedGameObject.name)
             {
                 case "CenterEyeAnchor":
-                    return (OVRManager.isHmdPresent ? OVRPlugin.GetNodeVelocity(OVRPlugin.Node.EyeCenter, OVRPlugin.Step.Render).FromFlippedZVector3f() : Vector3.zero);
+                    return RelativeTo.transform.rotation * (OVRManager.isHmdPresent ? OVRPlugin.GetNodeVelocity(OVRPlugin.Node.EyeCenter, OVRPlugin.Step.Render).FromFlippedZVector3f() : Vector3.zero);
                 case "LeftHandAnchor":
-                    return OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LTouch);
+                    return RelativeTo.transform.rotation * OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LTouch);
                 case "RightHandAnchor":
-                    return OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
+                    return RelativeTo.transform.rotation * OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
                 default:
                     return Vector3.zero;
             }
@@ -45,11 +51,11 @@
             switch (TrackedGameObject.name)
             {
                 case "CenterEyeAnchor":
-                    return (OVRManager.isHmdPresent ? OVRPlugin.GetNodeAngularVelocity(OVRPlugin.Node.EyeCenter, OVRPlugin.Step.Render).FromFlippedZVector3f() : Vector3.zero);
+                    return TrackedGameObject.transform.rotation * (OVRManager.isHmdPresent ? OVRPlugin.GetNodeAngularVelocity(OVRPlugin.Node.EyeCenter, OVRPlugin.Step.Render).FromFlippedZVector3f() : Vector3.zero);
                 case "LeftHandAnchor":
-                    return OVRInput.GetLocalControllerAngularVelocity(OVRInput.Controller.LTouch);
+                    return TrackedGameObject.transform.rotation * OVRInput.GetLocalControllerAngularVelocity(OVRInput.Controller.LTouch);
                 case "RightHandAnchor":
-                    return OVRInput.GetLocalControllerAngularVelocity(OVRInput.Controller.RTouch);
+                    return TrackedGameObject.transform.rotation * OVRInput.GetLocalControllerAngularVelocity(OVRInput.Controller.RTouch);
                 default:
                     return Vector3.zero;
             }
