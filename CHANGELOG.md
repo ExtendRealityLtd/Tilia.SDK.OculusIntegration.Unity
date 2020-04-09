@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.0](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.0.5...v1.1.0) (2020-04-09)
+
+#### Features
+
+* **CameraRig:** add haptics and supplement cameras to rig ([2af472c](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/2af472c8f64d6a8f7a2f2eca5eba90730ee69d5b))
+  > The TrackedAlias now allows for haptic processors for the controller and a list of any supplement cameras found on the camera rig.
+  > 
+  > The Oculus haptic processors have been added to the rig along with the references to the additional left and right cameras.
+
 ### [1.0.5](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.0.4...v1.0.5) (2020-04-03)
 
 #### Miscellaneous Chores
