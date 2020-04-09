@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.1.0...v1.1.1) (2020-04-09)
+
+#### Bug Fixes
+
+* **Tracking:** account for parent rotations when calculating velocity ([181a730](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/181a73087bd2591e14e62bc1ac8c3357b726a20d))
+  > The velocity calculations need to take in consideration the rotation of the camera rig otherwise they report the incorrect velocity values.
+
 ## [1.1.0](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.0.5...v1.1.0) (2020-04-09)
 
 #### Features
