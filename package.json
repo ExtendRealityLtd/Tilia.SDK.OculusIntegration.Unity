@@ -2,7 +2,7 @@
     "name": "io.extendreality.tilia.sdk.oculusintegration.unity",
     "displayName": "Tilia SDK OculusIntegration Unity",
     "description": "SDK Wrappers for the Oculus Integration Unity asset.",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "unity": "2018.3",
     "unityRelease": "10f1",
     "keywords": [
