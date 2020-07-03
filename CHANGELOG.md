@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.1.7...v1.2.0) (2020-07-03)
+
+#### Features
+
+* **API:** add auto-generated API documentation ([f87e669](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/f87e6696a64aa53e6e84e99a03302af0b1180b9d))
+  > The API documentation is auto generated with docfx and converted to markdown via turndown in a custom nodejs script.
+
+#### Bug Fixes
+
+* **package.json:** add docfx.json file ([ca2e6d3](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/ca2e6d32e0ec205ee7999b824a02e241875c2c40))
+  > The docfx.json file was missing from the package.json causing the build process to fail. It has now been added.
+
 ### [1.1.7](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.1.6...v1.1.7) (2020-06-08)
 
 #### Miscellaneous Chores
