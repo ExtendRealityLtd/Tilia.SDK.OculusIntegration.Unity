@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.6](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.2.5...v1.2.6) (2020-09-24)
+
+#### Bug Fixes
+
+* **Tracking:** add null checks on velocity estimator ([2cc7335](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/2cc7335994cfcd3fad572348252208331a2f6b25))
+  > The OVRAnchorVelocityEstimator now checks to see if the required properties are null to prevent null exceptions.
+
 ### [1.2.5](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.2.4...v1.2.5) (2020-08-29)
 
 #### Miscellaneous Chores
