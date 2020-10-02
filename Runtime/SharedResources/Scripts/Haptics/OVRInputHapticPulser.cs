@@ -11,12 +11,6 @@
     public class OVRInputHapticPulser : HapticPulser
     {
         /// <summary>
-        /// The frequency between each pulse.
-        /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Range(0f, 1f)]
-        public float Frequency { get; set; } = 0.1f;
-        /// <summary>
         /// The controller to pulse.
         /// </summary>
         [Serialized]
@@ -28,6 +22,12 @@
         [Serialized]
         [field: DocumentedByXml]
         public float Duration { get; set; } = 0.1f;
+        /// <summary>
+        /// The frequency between each pulse.
+        /// </summary>
+        [Serialized]
+        [field: DocumentedByXml, Range(0f, 1f)]
+        public float Frequency { get; set; } = 0.1f;
 
         /// <inheritdoc />
         protected override void DoBegin()
