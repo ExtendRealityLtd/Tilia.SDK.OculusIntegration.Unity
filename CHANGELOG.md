@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.3.0](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.2.6...v1.3.0) (2020-10-02)
+
+#### Features
+
+* **Haptics:** add haptic profiles for common haptic output ([769a5a4](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/769a5a4fa08430a37b8240f073ceb8d07a1313d8))
+  > Nine new haptic profiles have been added for common haptic output:
+  > 
+  > * ShortLight - short duration with a light vibration. * ShortMedium - short duration with a medium vibration. * ShortStrong - short duration with a strong vibration. * LongLight - long duration with a light vibration. * LongMedium - long duration with a medium vibration. * LongStrong - long duration with a strong vibration. * ContinuousLight - infinite duration with a light vibration. * ContinuousMedium - infinite duration with a medium vibration. * ContinuousStrong - infinite duration with a strong vibration.
+
 ### [1.2.6](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.2.5...v1.2.6) (2020-09-24)
 
 #### Bug Fixes
