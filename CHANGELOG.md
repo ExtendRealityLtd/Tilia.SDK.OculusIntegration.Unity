@@ -1,5 +1,14 @@
 # Changelog
 
+### [1.3.6](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.3.5...v1.3.6) (2021-02-04)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.zinnia.unity from 1.29.0 to 1.30.0 ([67b8244](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/67b824484a99ed57f80936656ea9bd0c6ab0192f))
+  > Bumps [io.extendreality.zinnia.unity](https://github.com/ExtendRealityLtd/Zinnia.Unity) from 1.29.0 to 1.30.0. - [Release notes](https://github.com/ExtendRealityLtd/Zinnia.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Zinnia.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Zinnia.Unity/compare/v1.29.0...v1.30.0)
+  > 
+  > Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+
 ### [1.3.5](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.3.4...v1.3.5) (2021-01-07)
 
 #### Miscellaneous Chores
