@@ -1,5 +1,14 @@
 # Changelog
 
+### [1.3.13](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.3.12...v1.3.13) (2021-06-10)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.zinnia.unity from 1.36.0 to 1.36.1 ([2c67584](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/2c67584e40fc4ba6d25d44e8cb2cbdd91a3e5555))
+  > Bumps [io.extendreality.zinnia.unity](https://github.com/ExtendRealityLtd/Zinnia.Unity) from 1.36.0 to 1.36.1. - [Release notes](https://github.com/ExtendRealityLtd/Zinnia.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Zinnia.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Zinnia.Unity/compare/v1.36.0...v1.36.1)
+* **README.md:** update title logo to related-media repo ([cb29c2a](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/cb29c2adaa42ecf4e1a387f531e124f0454cf12d))
+  > The title logo is now located on the related-media repo.
+
 ### [1.3.12](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.3.11...v1.3.12) (2021-05-09)
 
 #### Miscellaneous Chores
