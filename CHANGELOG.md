@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.3.14](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.3.13...v1.3.14) (2021-06-19)
+
+#### Bug Fixes
+
+* **FodyWeavers.xml:** provide more precise assembly name ([95cf8ce](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/95cf8ce033db6bf0991f7f7c5ad90a493643e626))
+  > The Assembly Name regular expression has been updated so it is more precise to the namespace in the package.
+
 ### [1.3.13](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.3.12...v1.3.13) (2021-06-10)
 
 #### Miscellaneous Chores
