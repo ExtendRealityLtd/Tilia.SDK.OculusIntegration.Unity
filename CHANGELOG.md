@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.4.0](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.3.24...v1.4.0) (2022-01-20)
+
+#### Features
+
+* **prefab:** add device details about headset and controllers ([c63a0d2](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/c63a0d20334a1984dc618437b6ccb354cde28757))
+  > The new DeviceDetailsRecord has been extended into the OVRInputDetailsRecord and the OVRPluginDetailsRecord that provide information about an Oculus controller or headset device and this is now stored on the prefab so it is easily available at runtime.
+  > 
+  > The DominantControllerObserver has also been added to the prefab to make it easier to determine the current dominant controller.
+* **Utility:** add prefab creators for oculus sdk prefabs ([44ccb36](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/44ccb3695426e385190ef7d0b27bd20d2dab60ab))
+  > The prefabs included in the OculusIntegration package now have a prefab creator that makes it easy to add the prefabs to the scene via the new `GameObject -> Tilia` menu.
+
 ### [1.3.24](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.3.23...v1.3.24) (2022-01-17)
 
 #### Miscellaneous Chores
