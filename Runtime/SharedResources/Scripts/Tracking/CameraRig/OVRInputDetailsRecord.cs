@@ -53,6 +53,28 @@
         public override BatteryStatus BatteryChargeStatus { get => BatteryStatus.Unknown; protected set => throw new System.NotImplementedException(); }
 
         /// <summary>
+        /// The last known battery charge status.
+        /// </summary>
+        protected BatteryStatus lastKnownBatteryStatus;
+        /// <summary>
+        /// The last known is connected status.
+        /// </summary>
+        protected bool lastKnownIsConnected;
+        /// <summary>
+        /// The last known tracking type.
+        /// </summary>
+        protected SpatialTrackingType lastKnownTrackingType;
+
+        /// <summary>
+        /// Sets the <see cref="Controller"/>.
+        /// </summary>
+        /// <param name="index">The index of the <see cref="OVRInput.Controller"/>.</param>
+        public virtual void SetControllerType(int index)
+        {
+            Controller = EnumExtensions.GetByIndex<OVRInput.Controller>(index);
+        }
+
+        /// <summary>
         /// Converts an <see cref="OVRInput.Controller"/> type to a Unity <see cref="XRNode"/> type.
         /// </summary>
         /// <param name="controller">The controller type to convert.</param>
@@ -97,28 +119,6 @@
             }
 
             return 2;
-        }
-
-        /// <summary>
-        /// The last known battery charge status.
-        /// </summary>
-        protected BatteryStatus lastKnownBatteryStatus;
-        /// <summary>
-        /// The last known is connected status.
-        /// </summary>
-        protected bool lastKnownIsConnected;
-        /// <summary>
-        /// The last known tracking type.
-        /// </summary>
-        protected SpatialTrackingType lastKnownTrackingType;
-
-        /// <summary>
-        /// Sets the <see cref="Controller"/>.
-        /// </summary>
-        /// <param name="index">The index of the <see cref="OVRInput.Controller"/>.</param>
-        public virtual void SetNodeType(int index)
-        {
-            Controller = EnumExtensions.GetByIndex<OVRInput.Controller>(index);
         }
 
         /// <inheritdoc/>

@@ -40,7 +40,7 @@
         /// <inheritdoc/>
         public override float BatteryLevel { get => SystemInfo.batteryLevel; protected set => throw new System.NotImplementedException(); }
         /// <inheritdoc/>
-        public override BatteryStatus BatteryChargeStatus { get => BatteryStatus.Unknown; protected set => throw new System.NotImplementedException(); }
+        public override BatteryStatus BatteryChargeStatus { get => SystemInfo.batteryStatus; protected set => throw new System.NotImplementedException(); }
 
         /// <summary>
         /// The last known battery charge status.

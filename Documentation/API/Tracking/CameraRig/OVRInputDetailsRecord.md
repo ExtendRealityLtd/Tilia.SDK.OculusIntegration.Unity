@@ -25,7 +25,7 @@
   * [HasBatteryChargeStatusChanged()]
   * [HasIsConnectedChanged()]
   * [HasTrackingTypeChanged()]
-  * [SetNodeType(Int32)]
+  * [SetControllerType(Int32)]
 
 ## Details
 
@@ -240,14 +240,14 @@ protected override bool HasTrackingTypeChanged()
 | --- | --- |
 | System.Boolean | n/a |
 
-#### SetNodeType(Int32)
+#### SetControllerType(Int32)
 
 Sets the [Controller].
 
 ##### Declaration
 
 ```
-public virtual void SetNodeType(int index)
+public virtual void SetControllerType(int index)
 ```
 
 ##### Parameters
@@ -281,4 +281,4 @@ public virtual void SetNodeType(int index)
 [HasBatteryChargeStatusChanged()]: #HasBatteryChargeStatusChanged
 [HasIsConnectedChanged()]: #HasIsConnectedChanged
 [HasTrackingTypeChanged()]: #HasTrackingTypeChanged
-[SetNodeType(Int32)]: #SetNodeTypeInt32
+[SetControllerType(Int32)]: #SetControllerTypeInt32
