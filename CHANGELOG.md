@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.4.0...v1.5.0) (2022-01-26)
+
+#### Features
+
+* **Tracking:** add battery status for headset ([8e496f1](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/8e496f1dc07b994f3c74b824ee7a5bfb30f9fb66))
+  > The battery status now reports the headset battery status from the default SystemInfo class.
+
 ## [1.4.0](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.3.24...v1.4.0) (2022-01-20)
 
 #### Features
