@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.5.1...v1.6.0) (2022-02-07)
+
+#### Features
+
+* **Tracking:** simplify records by extending base class ([c1aac23](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/c1aac23a5b0183d4e5594835bd3e27ebd864eec8))
+  > The OVRInputDetailsRecord and the OVRPluginDetailsRecord now extend the BaseDeviceDetailsRecord which handles many of the core functions so these classes can be simplified.
+
 ### [1.5.1](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.5.0...v1.5.1) (2022-02-05)
 
 #### Miscellaneous Chores
