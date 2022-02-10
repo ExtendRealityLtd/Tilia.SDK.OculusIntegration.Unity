@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.6.2](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.6.1...v1.6.2) (2022-02-10)
+
+#### Bug Fixes
+
+* **Prefabs:** move device record moment to LateUpdate ([8239f0e](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/8239f0eb10346f9bf57c79de1018469af45539c7))
+  > The moment processing of the device details records should happen in the LateUpdate as in line with other camera rig setups as it doesn't need to be super instant to report changes in device details.
+
 ### [1.6.1](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.6.0...v1.6.1) (2022-02-10)
 
 #### Bug Fixes
