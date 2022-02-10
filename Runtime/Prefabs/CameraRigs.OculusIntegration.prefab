@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0eab237e25807459af1c5caf4d3d33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  processMoment: 5
+  processMoment: 3
   processes: {fileID: 943387921861054657}
 --- !u!1 &2367585102859142424
 GameObject:
