@@ -1,4 +1,4 @@
-namespace Tilia.CameraRigs.TrackedAlias.Utility
+namespace Tilia.SDK.OculusIntegration.Utility
 {
     using System.IO;
     using UnityEditor;
