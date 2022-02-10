@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.6.1](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.6.0...v1.6.1) (2022-02-10)
+
+#### Bug Fixes
+
+* **Utility:** update namespace to be correct ([c2f4911](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/c2f49111e68fcf9cae6b1a67b591fe6440c7c468))
+  > The namespace for the PrefabCreator was not correct and was a copy and paste issue. It has now been updated to the correct namespace.
+
 ## [1.6.0](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.5.1...v1.6.0) (2022-02-07)
 
 #### Features
