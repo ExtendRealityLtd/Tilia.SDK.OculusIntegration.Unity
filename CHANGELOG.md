@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.6.3...v1.7.0) (2022-03-02)
+
+#### Features
+
+* **package.json:** add information urls to package ([5908c4f](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/5908c4f52acb6de5608835928f19b9907fb40eee))
+  > The changelog, documentation and license url has been added to the package.json as these are used within the Unity package manager.
+
 ### [1.6.3](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.6.2...v1.6.3) (2022-02-14)
 
 #### Miscellaneous Chores
