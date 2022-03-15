@@ -1,5 +1,14 @@
 # Changelog
 
+### [1.7.2](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.7.1...v1.7.2) (2022-03-15)
+
+#### Miscellaneous Chores
+
+* **dependabot:** remove bddckr from reviewers ([16af420](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/16af420b082d682bc25f3f2483e6e460a115de6e))
+  > Chris hasn't been actively part of the project for a while.
+* **deps:** bump io.extendreality.zinnia.unity from 1.47.0 to 1.47.1 ([0a7fac6](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/0a7fac6a5055209e2ad8f157c97b746aa12393bc))
+  > Bumps [io.extendreality.zinnia.unity](https://github.com/ExtendRealityLtd/Zinnia.Unity) from 1.47.0 to 1.47.1. - [Release notes](https://github.com/ExtendRealityLtd/Zinnia.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Zinnia.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Zinnia.Unity/compare/v1.47.0...v1.47.1)
+
 ### [1.7.1](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v1.7.0...v1.7.1) (2022-03-15)
 
 #### Miscellaneous Chores
