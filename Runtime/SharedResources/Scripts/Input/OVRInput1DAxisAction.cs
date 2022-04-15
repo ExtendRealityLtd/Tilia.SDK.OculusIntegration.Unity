@@ -1,7 +1,6 @@
 ﻿namespace Tilia.SDK.OculusIntegration.Input
 {
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
+    using UnityEngine;
     using Zinnia.Action;
     using Zinnia.Process;
 
@@ -10,18 +9,40 @@
     /// </summary>
     public class OVRInput1DAxisAction : FloatAction, IProcessable, OVRInputControllable
     {
+        [Tooltip("The controller to listen for the state change on.")]
+        [SerializeField]
+        private OVRInput.Controller controller = OVRInput.Controller.Active;
         /// <summary>
         /// The controller to listen for the state change on.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public OVRInput.Controller Controller { get; set; } = OVRInput.Controller.Active;
+        public OVRInput.Controller Controller
+        {
+            get
+            {
+                return controller;
+            }
+            set
+            {
+                controller = value;
+            }
+        }
+        [Tooltip("The axis to listen for state changes on.")]
+        [SerializeField]
+        private OVRInput.Axis1D axis;
         /// <summary>
         /// The axis to listen for state changes on.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public OVRInput.Axis1D Axis { get; set; }
+        public OVRInput.Axis1D Axis
+        {
+            get
+            {
+                return axis;
+            }
+            set
+            {
+                axis = value;
+            }
+        }
 
         /// <inheritdoc />
         public void Process()

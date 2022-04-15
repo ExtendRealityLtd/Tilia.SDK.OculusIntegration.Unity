@@ -9,10 +9,7 @@
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
-    "precompiledReferences": [
-        "Malimbe.PropertySerializationAttribute.dll",
-        "Malimbe.XmlDocumentationAttribute.dll"
-    ],
+    "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": []
 }
