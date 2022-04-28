@@ -1,7 +1,5 @@
 ﻿namespace Tilia.SDK.OculusIntegration.Association
 {
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
     using UnityEngine;
     using Zinnia.Association;
 
@@ -10,25 +8,46 @@
     /// </summary>
     public class OVRInputControllerAssociation : GameObjectsAssociation
     {
+        [Tooltip("The OVRInput.Controller that needs to be connected.")]
+        [SerializeField]
+        private OVRInput.Controller controller = OVRInput.Controller.None;
         /// <summary>
         /// The <see cref="OVRInput.Controller"/> that needs to be connected.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public OVRInput.Controller Controller { get; set; } = OVRInput.Controller.None;
+        public OVRInput.Controller Controller
+        {
+            get
+            {
+                return controller;
+            }
+            set
+            {
+                controller = value;
+            }
+        }
 
+        [Tooltip("Whether the controller needs to be active.")]
+        [SerializeField]
+        private bool needsToBeActive;
         /// <summary>
         /// Whether the <see cref="controller"/> needs to be active.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public bool NeedsToBeActive { get; set; }
+        public bool NeedsToBeActive
+        {
+            get
+            {
+                return needsToBeActive;
+            }
+            set
+            {
+                needsToBeActive = value;
+            }
+        }
 
         /// <inheritdoc />
         public override bool ShouldBeActive()
         {
-            return OVRInput.IsControllerConnected(Controller) &&
-                (!NeedsToBeActive || (OVRInput.GetActiveController() == Controller));
+            return OVRInput.IsControllerConnected(Controller) && (!NeedsToBeActive || (OVRInput.GetActiveController() == Controller));
         }
     }
 }

@@ -1,7 +1,5 @@
 ﻿namespace Tilia.SDK.OculusIntegration.Tracking.Velocity
 {
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
     using UnityEngine;
     using Zinnia.Tracking.Velocity;
 
@@ -10,18 +8,40 @@
     /// </summary>
     public class OVRAnchorVelocityEstimator : VelocityTracker
     {
+        [Tooltip("The GameObject anchor from the OVRCameraRig to track velocity for.")]
+        [SerializeField]
+        private GameObject trackedGameObject;
         /// <summary>
         /// The <see cref="GameObject"/> anchor from the OVRCameraRig to track velocity for.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public GameObject TrackedGameObject { get; set; }
+        public GameObject TrackedGameObject
+        {
+            get
+            {
+                return trackedGameObject;
+            }
+            set
+            {
+                trackedGameObject = value;
+            }
+        }
+        [Tooltip("An optional GameObject to consider the source relative to when retrieving velocities.")]
+        [SerializeField]
+        private GameObject relativeTo;
         /// <summary>
         /// An optional <see cref="GameObject"/> to consider the source relative to when retrieving velocities.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public GameObject RelativeTo { get; set; }
+        public GameObject RelativeTo
+        {
+            get
+            {
+                return relativeTo;
+            }
+            set
+            {
+                relativeTo = value;
+            }
+        }
 
         /// <inheritdoc />
         public override bool IsActive()

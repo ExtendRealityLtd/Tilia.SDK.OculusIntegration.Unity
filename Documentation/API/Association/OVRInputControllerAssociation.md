@@ -44,7 +44,7 @@ public OVRInput.Controller Controller { get; set; }
 
 #### NeedsToBeActive
 
-Whether the controller needs to be active.
+Whether the Tilia.SDK.OculusIntegration.Association.OVRInputControllerAssociation.controller needs to be active.
 
 ##### Declaration
 

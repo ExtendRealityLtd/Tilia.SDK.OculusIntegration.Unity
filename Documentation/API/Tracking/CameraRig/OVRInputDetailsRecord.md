@@ -5,26 +5,16 @@
 * [Inheritance]
 * [Namespace]
 * [Syntax]
-* [Fields]
-  * [lastKnownBatteryStatus]
-  * [lastKnownIsConnected]
-  * [lastKnownTrackingType]
 * [Properties]
   * [BatteryChargeStatus]
   * [BatteryLevel]
   * [Controller]
   * [IsConnected]
-  * [Manufacturer]
-  * [Model]
   * [Priority]
-  * [TrackingType]
   * [XRNodeType]
 * [Methods]
   * [ConvertFromController(OVRInput.Controller)]
   * [GetPriority(OVRInput.Controller)]
-  * [HasBatteryChargeStatusChanged()]
-  * [HasIsConnectedChanged()]
-  * [HasTrackingTypeChanged()]
   * [SetControllerType(Int32)]
 
 ## Details
@@ -41,39 +31,7 @@
 ##### Syntax
 
 ```
-public class OVRInputDetailsRecord : DeviceDetailsRecord
-```
-
-### Fields
-
-#### lastKnownBatteryStatus
-
-The last known battery charge status.
-
-##### Declaration
-
-```
-protected BatteryStatus lastKnownBatteryStatus
-```
-
-#### lastKnownIsConnected
-
-The last known is connected status.
-
-##### Declaration
-
-```
-protected bool lastKnownIsConnected
-```
-
-#### lastKnownTrackingType
-
-The last known tracking type.
-
-##### Declaration
-
-```
-protected SpatialTrackingType lastKnownTrackingType
+public class OVRInputDetailsRecord : BaseDeviceDetailsRecord
 ```
 
 ### Properties
@@ -112,36 +70,12 @@ public OVRInput.Controller Controller { get; set; }
 public override bool IsConnected { get; protected set; }
 ```
 
-#### Manufacturer
-
-##### Declaration
-
-```
-public override string Manufacturer { get; protected set; }
-```
-
-#### Model
-
-##### Declaration
-
-```
-public override string Model { get; protected set; }
-```
-
 #### Priority
 
 ##### Declaration
 
 ```
 public override int Priority { get; protected set; }
-```
-
-#### TrackingType
-
-##### Declaration
-
-```
-public override SpatialTrackingType TrackingType { get; protected set; }
 ```
 
 #### XRNodeType
@@ -198,48 +132,6 @@ protected virtual int GetPriority(OVRInput.Controller controller)
 | --- | --- |
 | System.Int32 | The priority of the controller. |
 
-#### HasBatteryChargeStatusChanged()
-
-##### Declaration
-
-```
-protected override bool HasBatteryChargeStatusChanged()
-```
-
-##### Returns
-
-| Type | Description |
-| --- | --- |
-| System.Boolean | n/a |
-
-#### HasIsConnectedChanged()
-
-##### Declaration
-
-```
-protected override bool HasIsConnectedChanged()
-```
-
-##### Returns
-
-| Type | Description |
-| --- | --- |
-| System.Boolean | n/a |
-
-#### HasTrackingTypeChanged()
-
-##### Declaration
-
-```
-protected override bool HasTrackingTypeChanged()
-```
-
-##### Returns
-
-| Type | Description |
-| --- | --- |
-| System.Boolean | n/a |
-
 #### SetControllerType(Int32)
 
 Sets the [Controller].
@@ -261,24 +153,14 @@ public virtual void SetControllerType(int index)
 [Inheritance]: #Inheritance
 [Namespace]: #Namespace
 [Syntax]: #Syntax
-[Fields]: #Fields
-[lastKnownBatteryStatus]: #lastKnownBatteryStatus
-[lastKnownIsConnected]: #lastKnownIsConnected
-[lastKnownTrackingType]: #lastKnownTrackingType
 [Properties]: #Properties
 [BatteryChargeStatus]: #BatteryChargeStatus
 [BatteryLevel]: #BatteryLevel
 [Controller]: #Controller
 [IsConnected]: #IsConnected
-[Manufacturer]: #Manufacturer
-[Model]: #Model
 [Priority]: #Priority
-[TrackingType]: #TrackingType
 [XRNodeType]: #XRNodeType
 [Methods]: #Methods
 [ConvertFromController(OVRInput.Controller)]: #ConvertFromControllerOVRInput.Controller
 [GetPriority(OVRInput.Controller)]: #GetPriorityOVRInput.Controller
-[HasBatteryChargeStatusChanged()]: #HasBatteryChargeStatusChanged
-[HasIsConnectedChanged()]: #HasIsConnectedChanged
-[HasTrackingTypeChanged()]: #HasTrackingTypeChanged
 [SetControllerType(Int32)]: #SetControllerTypeInt32

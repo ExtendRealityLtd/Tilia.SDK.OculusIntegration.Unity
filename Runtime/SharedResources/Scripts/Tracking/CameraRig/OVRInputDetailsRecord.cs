@@ -1,7 +1,5 @@
 ﻿namespace Tilia.SDK.OculusIntegration.Tracking.CameraRig
 {
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
     using UnityEngine;
     using UnityEngine.XR;
     using Zinnia.Extension;
@@ -9,12 +7,23 @@
 
     public class OVRInputDetailsRecord : BaseDeviceDetailsRecord
     {
+        [Tooltip("OVR Controller type.")]
+        [SerializeField]
+        private OVRInput.Controller controller;
         /// <summary>
         /// OVR Controller type.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public OVRInput.Controller Controller { get; set; }
+        public OVRInput.Controller Controller
+        {
+            get
+            {
+                return controller;
+            }
+            set
+            {
+                controller = value;
+            }
+        }
 
         /// <inheritdoc/>
         public override XRNode XRNodeType { get => ConvertFromController(Controller); protected set => throw new System.NotImplementedException(); }
