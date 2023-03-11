@@ -34,7 +34,7 @@ IProcessable
 ##### Syntax
 
 ```
-public class OVRInput2DAxisAction : Vector2Action, IProcessable, OVRInputControllable
+public class OVRInput2DAxisAction : Vector2Action, OVRInputControllable
 ```
 
 ### Properties

@@ -34,7 +34,7 @@ IProcessable
 ##### Syntax
 
 ```
-public class OVRInput1DAxisAction : FloatAction, IProcessable, OVRInputControllable
+public class OVRInput1DAxisAction : FloatAction, OVRInputControllable
 ```
 
 ### Properties

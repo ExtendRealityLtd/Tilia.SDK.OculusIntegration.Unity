@@ -34,7 +34,7 @@ IProcessable
 ##### Syntax
 
 ```
-public class OVRInputNearTouchAction : BooleanAction, IProcessable, OVRInputControllable
+public class OVRInputNearTouchAction : BooleanAction, OVRInputControllable
 ```
 
 ### Properties
