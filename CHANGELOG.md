@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.1.0](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v2.0.7...v2.1.0) (2023-03-11)
+
+#### Features
+
+* **DeviceDetails:** add passthrough camera details ([7697d99](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/7697d990aee1b50418d76249218a65bd759fecd2))
+  > The DeviceDetailsRecord now supports passthrough camera options and the Oculus Integration SDK supports a PassThrough layer for the Headset cameras.
+  > 
+  > This adds the ability to access the passthrough SDK via a generic mechanism on the OVRPluginDetailsRecord, which is used for the DeviceDetailsRecord for the headset.
+  > 
+  > The OVRInputDetailsRecord, which is used for controllers just implements a default false output as no controllers support passthrough as of yet.
+
 ### [2.0.7](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v2.0.6...v2.0.7) (2023-02-22)
 
 #### Miscellaneous Chores
