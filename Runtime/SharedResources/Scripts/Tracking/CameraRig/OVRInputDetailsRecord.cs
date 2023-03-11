@@ -35,6 +35,8 @@
         public override float BatteryLevel { get => OVRInput.GetControllerBatteryPercentRemaining(Controller) / 100f; protected set => throw new System.NotImplementedException(); }
         /// <inheritdoc/>
         public override BatteryStatus BatteryChargeStatus { get => BatteryStatus.Unknown; protected set => throw new System.NotImplementedException(); }
+        /// <inheritdoc/>
+        public override bool HasPassThroughCamera { get => false; protected set => throw new System.NotImplementedException(); }
 
         /// <summary>
         /// Sets the <see cref="Controller"/>.

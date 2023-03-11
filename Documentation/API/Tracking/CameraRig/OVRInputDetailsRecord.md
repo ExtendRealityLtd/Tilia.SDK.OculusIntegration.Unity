@@ -9,6 +9,7 @@
   * [BatteryChargeStatus]
   * [BatteryLevel]
   * [Controller]
+  * [HasPassThroughCamera]
   * [IsConnected]
   * [Priority]
   * [XRNodeType]
@@ -60,6 +61,14 @@ OVR Controller type.
 
 ```
 public OVRInput.Controller Controller { get; set; }
+```
+
+#### HasPassThroughCamera
+
+##### Declaration
+
+```
+public override bool HasPassThroughCamera { get; protected set; }
 ```
 
 #### IsConnected
@@ -157,6 +166,7 @@ public virtual void SetControllerType(int index)
 [BatteryChargeStatus]: #BatteryChargeStatus
 [BatteryLevel]: #BatteryLevel
 [Controller]: #Controller
+[HasPassThroughCamera]: #HasPassThroughCamera
 [IsConnected]: #IsConnected
 [Priority]: #Priority
 [XRNodeType]: #XRNodeType
