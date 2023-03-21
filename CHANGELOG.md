@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.1.4](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v2.1.3...v2.1.4) (2023-03-21)
+
+#### Bug Fixes
+
+* **Tracking:** prevent null reference if no passthrough layer is given ([4090151](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/40901519b3c0ab471e610196e86b78354e4f50aa))
+  > The OVRPluginDetailsRecord can take an optional OVRPassthroughLayer component but it would give a null reference error if one was not provided. This has been fixed by checking to see if the reference is null before trying to perform actions on it.
+
 ### [2.1.3](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v2.1.2...v2.1.3) (2023-03-21)
 
 #### Miscellaneous Chores
