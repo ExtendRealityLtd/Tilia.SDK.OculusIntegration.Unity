@@ -55,20 +55,36 @@
 
         protected override void OnEnable()
         {
-            passthroughLayer.hidden = PassthroughLayerHiddenOnEnable;
             base.OnEnable();
+
+            if (PassthroughLayer == null)
+            {
+                return;
+            }
+
+            PassthroughLayer.hidden = PassthroughLayerHiddenOnEnable;
         }
 
         /// <inheritdoc/>
         protected override void EnablePassThrough()
         {
-            passthroughLayer.hidden = false;
+            if (PassthroughLayer == null)
+            {
+                return;
+            }
+
+            PassthroughLayer.hidden = false;
             base.EnablePassThrough();
         }
 
         /// <inheritdoc/>
         protected override void DisablePassThrough()
         {
+            if (PassthroughLayer == null)
+            {
+                return;
+            }
+
             passthroughLayer.hidden = true;
             base.DisablePassThrough();
         }
