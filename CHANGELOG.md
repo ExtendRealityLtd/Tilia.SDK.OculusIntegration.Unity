@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v2.1.4...v2.2.0) (2023-03-21)
+
+#### Features
+
+* **Tracking:** allow multiple passthrough layers on device details ([f43a70b](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/f43a70b9db03e14cad8e88f3c21fd079ca7efbbd))
+  > Because the Oculus SDK allows multiple passthrough layers, the device details record for Oculus now supports a list of passthrough layer settings.
+
 ### [2.1.4](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v2.1.3...v2.1.4) (2023-03-21)
 
 #### Bug Fixes
