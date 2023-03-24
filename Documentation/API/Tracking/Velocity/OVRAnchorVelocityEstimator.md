@@ -8,12 +8,15 @@ Retrieves the velocity and angular velocity from the specific named OVRCameraRig
 * [Namespace]
 * [Syntax]
 * [Properties]
+  * [AngularRotationSource]
+  * [RelativeRotation]
   * [RelativeTo]
   * [TrackedGameObject]
 * [Methods]
   * [DoGetAngularVelocity()]
   * [DoGetVelocity()]
   * [IsActive()]
+  * [SetAngularRotationSource(Int32)]
 
 ## Details
 
@@ -33,6 +36,26 @@ public class OVRAnchorVelocityEstimator : VelocityTracker
 ```
 
 ### Properties
+
+#### AngularRotationSource
+
+The source of the Angular Velocity rotation multiplier.
+
+##### Declaration
+
+```
+public OVRAnchorVelocityEstimator.AngularRotation AngularRotationSource { get; set; }
+```
+
+#### RelativeRotation
+
+The rotation of [RelativeTo] if it is set, otherwise Quaternion.identity.
+
+##### Declaration
+
+```
+protected virtual Quaternion RelativeRotation { get; }
+```
 
 #### RelativeTo
 
@@ -98,14 +121,36 @@ public override bool IsActive()
 | --- | --- |
 | System.Boolean | n/a |
 
+#### SetAngularRotationSource(Int32)
+
+Sets the [AngularRotationSource].
+
+##### Declaration
+
+```
+public virtual void SetAngularRotationSource(int index)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| System.Int32 | index | The index of the [OVRAnchorVelocityEstimator.AngularRotation]. |
+
 [Tilia.SDK.OculusIntegration.Tracking.Velocity]: README.md
+[RelativeTo]: OVRAnchorVelocityEstimator.md#RelativeTo
+[AngularRotationSource]: OVRAnchorVelocityEstimator.md#AngularRotationSource
+[OVRAnchorVelocityEstimator.AngularRotation]: OVRAnchorVelocityEstimator.AngularRotation.md
 [Inheritance]: #Inheritance
 [Namespace]: #Namespace
 [Syntax]: #Syntax
 [Properties]: #Properties
+[AngularRotationSource]: #AngularRotationSource
+[RelativeRotation]: #RelativeRotation
 [RelativeTo]: #RelativeTo
 [TrackedGameObject]: #TrackedGameObject
 [Methods]: #Methods
 [DoGetAngularVelocity()]: #DoGetAngularVelocity
 [DoGetVelocity()]: #DoGetVelocity
 [IsActive()]: #IsActive
+[SetAngularRotationSource(Int32)]: #SetAngularRotationSourceInt32

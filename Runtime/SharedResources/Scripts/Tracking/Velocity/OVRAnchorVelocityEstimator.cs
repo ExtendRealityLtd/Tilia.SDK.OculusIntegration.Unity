@@ -1,6 +1,7 @@
 ﻿namespace Tilia.SDK.OculusIntegration.Tracking.Velocity
 {
     using UnityEngine;
+    using Zinnia.Extension;
     using Zinnia.Tracking.Velocity;
 
     /// <summary>
@@ -8,6 +9,21 @@
     /// </summary>
     public class OVRAnchorVelocityEstimator : VelocityTracker
     {
+        /// <summary>
+        /// The source of the Angular Velocity rotation multiplier
+        /// </summary>
+        public enum AngularRotation
+        {
+            /// <summary>
+            /// Uses <see cref="TrackedGameObject"/> as the rotation multiplier.
+            /// </summary>
+            TrackedGameObject,
+            /// <summary>
+            /// Uses <see cref="RelativeTo"/> as the rotation multiplier.
+            /// </summary>
+            RelativeTo
+        }
+
         [Tooltip("The GameObject anchor from the OVRCameraRig to track velocity for.")]
         [SerializeField]
         private GameObject trackedGameObject;
@@ -42,6 +58,37 @@
                 relativeTo = value;
             }
         }
+        [Tooltip("The source of the Angular Velocity rotation multiplier.")]
+        [SerializeField]
+        private AngularRotation angularRotationSource = AngularRotation.RelativeTo;
+        /// <summary>
+        /// The source of the Angular Velocity rotation multiplier.
+        /// </summary>
+        public AngularRotation AngularRotationSource
+        {
+            get
+            {
+                return angularRotationSource;
+            }
+            set
+            {
+                angularRotationSource = value;
+            }
+        }
+
+        /// <summary>
+        /// The rotation of <see cref="RelativeTo"/> if it is set, otherwise <see cref="Quaternion.identity"/>.
+        /// </summary>
+        protected virtual Quaternion RelativeRotation => RelativeTo != null ? RelativeTo.transform.rotation : Quaternion.identity;
+
+        /// <summary>
+        /// Sets the <see cref="AngularRotationSource"/>.
+        /// </summary>
+        /// <param name="index">The index of the <see cref="AngularRotation"/>.</param>
+        public virtual void SetAngularRotationSource(int index)
+        {
+            AngularRotationSource = EnumExtensions.GetByIndex<AngularRotation>(index);
+        }
 
         /// <inheritdoc />
         public override bool IsActive()
@@ -57,15 +104,14 @@
                 return default;
             }
 
-            Quaternion relative = RelativeTo != null ? RelativeTo.transform.rotation : Quaternion.identity;
             switch (TrackedGameObject.name)
             {
                 case "CenterEyeAnchor":
-                    return relative * (OVRManager.isHmdPresent ? OVRPlugin.GetNodeVelocity(OVRPlugin.Node.EyeCenter, OVRPlugin.Step.Render).FromFlippedZVector3f() : Vector3.zero);
+                    return RelativeRotation * (OVRManager.isHmdPresent ? OVRPlugin.GetNodeVelocity(OVRPlugin.Node.EyeCenter, OVRPlugin.Step.Render).FromFlippedZVector3f() : Vector3.zero);
                 case "LeftHandAnchor":
-                    return relative * OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LTouch);
+                    return RelativeRotation * OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LTouch);
                 case "RightHandAnchor":
-                    return relative * OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
+                    return RelativeRotation * OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
                 default:
                     return default;
             }
@@ -79,14 +125,26 @@
                 return default;
             }
 
+            Quaternion rotationMultiplier = Quaternion.identity;
+            switch (AngularRotationSource)
+            {
+                case AngularRotation.RelativeTo:
+                    rotationMultiplier = RelativeRotation;
+                    break;
+                case AngularRotation.TrackedGameObject:
+                    rotationMultiplier = TrackedGameObject.transform.rotation;
+                    break;
+            }
+
+
             switch (TrackedGameObject.name)
             {
                 case "CenterEyeAnchor":
-                    return TrackedGameObject.transform.rotation * (OVRManager.isHmdPresent ? OVRPlugin.GetNodeAngularVelocity(OVRPlugin.Node.EyeCenter, OVRPlugin.Step.Render).FromFlippedZVector3f() : Vector3.zero);
+                    return rotationMultiplier * (OVRManager.isHmdPresent ? OVRPlugin.GetNodeAngularVelocity(OVRPlugin.Node.EyeCenter, OVRPlugin.Step.Render).FromFlippedZVector3f() : Vector3.zero);
                 case "LeftHandAnchor":
-                    return TrackedGameObject.transform.rotation * OVRInput.GetLocalControllerAngularVelocity(OVRInput.Controller.LTouch);
+                    return rotationMultiplier * -OVRInput.GetLocalControllerAngularVelocity(OVRInput.Controller.LTouch);
                 case "RightHandAnchor":
-                    return TrackedGameObject.transform.rotation * OVRInput.GetLocalControllerAngularVelocity(OVRInput.Controller.RTouch);
+                    return rotationMultiplier * -OVRInput.GetLocalControllerAngularVelocity(OVRInput.Controller.RTouch);
                 default:
                     return default;
             }

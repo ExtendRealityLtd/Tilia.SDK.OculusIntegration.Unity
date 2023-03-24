@@ -10,14 +10,15 @@
   * [BatteryLevel]
   * [HasPassThroughCamera]
   * [Model]
-  * [PassthroughLayer]
-  * [PassthroughLayerHiddenOnEnable]
+  * [PassthroughLayerOptions]
   * [Priority]
   * [XRNodeType]
 * [Methods]
   * [DisablePassThrough()]
   * [EnablePassThrough()]
+  * [HasPassthroughLayer()]
   * [OnEnable()]
+  * [SetPassthroughLayerState(Nullable<Boolean>)]
 
 ## Details
 
@@ -70,24 +71,14 @@ public override bool HasPassThroughCamera { get; protected set; }
 public override string Model { get; protected set; }
 ```
 
-#### PassthroughLayer
+#### PassthroughLayerOptions
 
-The OVRPassthroughLayer component for controlling camera passthrough.
-
-##### Declaration
-
-```
-public OVRPassthroughLayer PassthroughLayer { get; set; }
-```
-
-#### PassthroughLayerHiddenOnEnable
-
-Whether the OVRPassthroughLayer component is hidden on enable. Does not raise events.
+The collection of OVRPassthroughLayer components for controlling camera passthrough.
 
 ##### Declaration
 
 ```
-public bool PassthroughLayerHiddenOnEnable { get; set; }
+public List<OVRPluginDetailsRecord.PassThroughSetting> PassthroughLayerOptions { get; set; }
 ```
 
 #### Priority
@@ -124,6 +115,22 @@ protected override void DisablePassThrough()
 protected override void EnablePassThrough()
 ```
 
+#### HasPassthroughLayer()
+
+Determines whether there are any set passthrough layers.
+
+##### Declaration
+
+```
+protected virtual bool HasPassthroughLayer()
+```
+
+##### Returns
+
+| Type | Description |
+| --- | --- |
+| System.Boolean | Whether a passthrough layer exists. |
+
 #### OnEnable()
 
 ##### Declaration
@@ -132,7 +139,30 @@ protected override void EnablePassThrough()
 protected override void OnEnable()
 ```
 
+#### SetPassthroughLayerState(Nullable<Boolean>)
+
+Sets the passthrough layer state.
+
+##### Declaration
+
+```
+protected virtual bool SetPassthroughLayerState(bool? state)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| System.Nullable<System.Boolean\> | state | The state to set. If null is passed then it uses the setting's Tilia.SDK.OculusIntegration.Tracking.CameraRig.OVRPluginDetailsRecord.PassThroughSetting.passthroughLayerHiddenOnEnable value. |
+
+##### Returns
+
+| Type | Description |
+| --- | --- |
+| System.Boolean | Whether any passthrough layer state was set. |
+
 [Tilia.SDK.OculusIntegration.Tracking.CameraRig]: README.md
+[OVRPluginDetailsRecord.PassThroughSetting]: OVRPluginDetailsRecord.PassThroughSetting.md
 [Inheritance]: #Inheritance
 [Namespace]: #Namespace
 [Syntax]: #Syntax
@@ -141,11 +171,12 @@ protected override void OnEnable()
 [BatteryLevel]: #BatteryLevel
 [HasPassThroughCamera]: #HasPassThroughCamera
 [Model]: #Model
-[PassthroughLayer]: #PassthroughLayer
-[PassthroughLayerHiddenOnEnable]: #PassthroughLayerHiddenOnEnable
+[PassthroughLayerOptions]: #PassthroughLayerOptions
 [Priority]: #Priority
 [XRNodeType]: #XRNodeType
 [Methods]: #Methods
 [DisablePassThrough()]: #DisablePassThrough
 [EnablePassThrough()]: #EnablePassThrough
+[HasPassthroughLayer()]: #HasPassthroughLayer
 [OnEnable()]: #OnEnable
+[SetPassthroughLayerState(Nullable<Boolean>)]: #SetPassthroughLayerStateNullable<Boolean>
