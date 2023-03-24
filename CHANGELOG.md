@@ -1,5 +1,14 @@
 # Changelog
 
+### [2.2.1](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v2.2.0...v2.2.1) (2023-03-24)
+
+#### Bug Fixes
+
+* **Tracking:** ensure controller angular velocity is correct ([215cc19](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/215cc19f4d1284d10c971fcdd4b8793980057e79))
+  > The controller angular velocity was flipped when deploying to quest. This has now been fixed by flipping the reported angular velocity.
+  > 
+  > The way in which the relative to body is calculated is also different based on a Quest or Rift headset (for some random reason?!) so there is a new enum that allows the selection of whether to use the TrackedGameObject or the RelativeTo property for the offset multiplier and this will then need to be set based on whether it is a rift or quest headset. This can be done by rules and pattern matching so there won't be any automatic way in case this doesn't catch all scenarios that may come with future headsets.
+
 ## [2.2.0](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v2.1.4...v2.2.0) (2023-03-21)
 
 #### Features
