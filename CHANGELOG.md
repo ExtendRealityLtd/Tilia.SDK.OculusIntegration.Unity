@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v2.2.2...v2.3.0) (2023-03-28)
+
+#### Features
+
+* **Tracking:** replace isActiveAndEnabled ([48a358b](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/commit/48a358bff00c41ad53e0d8944f5f1f73ccf0f33b))
+  > The isActiveAndEnabled call has been replaced with CheckIsActiveAndEnabled as this is more consistent.
+
 ### [2.2.2](https://github.com/ExtendRealityLtd/Tilia.SDK.OculusIntegration.Unity/compare/v2.2.1...v2.2.2) (2023-03-28)
 
 #### Miscellaneous Chores
