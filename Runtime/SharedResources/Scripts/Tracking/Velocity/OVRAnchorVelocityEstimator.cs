@@ -93,7 +93,7 @@
         /// <inheritdoc />
         public override bool IsActive()
         {
-            return TrackedGameObject != null && TrackedGameObject.activeInHierarchy && isActiveAndEnabled;
+            return TrackedGameObject != null && TrackedGameObject.activeInHierarchy && this.CheckIsActiveAndEnabled();
         }
 
         /// <inheritdoc />
